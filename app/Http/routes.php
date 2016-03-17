@@ -2,21 +2,6 @@
 
 /*
 |--------------------------------------------------------------------------
-| Routes File
-|--------------------------------------------------------------------------
-|
-| Here is where you will register all of the routes in an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the controller to call when that URI is requested.
-|
-*/
-
-Route::get('/', function () {
-    return view('welcome');
-});
-
-/*
-|--------------------------------------------------------------------------
 | Application Routes
 |--------------------------------------------------------------------------
 |
@@ -28,4 +13,17 @@ Route::get('/', function () {
 
 Route::group(['middleware' => ['web']], function () {
     //
+    Route::get('/', function () {
+        return view('index');
+    });
+
+    // Gets main page for lorem ipsum
+    Route::get('/lorem-ipsum', 'LoremIpsumController@getIndex');
+    // Posts for submitting the lorem ipsum generator form
+    Route::post('/lorem-ipsum', 'LoremIpsumController@postGenerate');
+
+    // Gets main page for random user generator
+    Route::get('/user-generator', 'UserGeneratorController@getIndex');
+    // Posts for submitting the random user generator form
+    Route::post('/user-generator', 'UserGeneratorController@postGenerate');
 });

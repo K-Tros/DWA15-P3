@@ -1,3 +1,13 @@
+# Kevin's TODOs
+
+* Add css and other styling.
+* Figure out request url issues in master.blade.php.
+* Add actual forms to generator pages.
+* Add logic to interpret and use form inputs.
+* Add composer packages for generating lorem-ipsum and random users.
+* Generally just add more detail to pages.
+* Figure out why the footer doesn't look pretty.
+
 # Laravel PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
