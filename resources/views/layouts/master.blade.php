@@ -13,18 +13,11 @@
     <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' rel='stylesheet'>
     <link href='https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/lumen/bootstrap.min.css' rel='stylesheet'>
 
-    {{-- <link href='/css/foobooks.css' rel='stylesheet'> --}}
-
     {{-- Yield any page specific CSS files or anything else you might want in the <head> --}}
     @yield('head')
 
 </head>
 <body>
-
-    <header>
-        <a href='/'>
-        </a>
-    </header>
 
     <nav>
         <ul>
@@ -38,12 +31,6 @@
         @yield('content')
     </section>
 
-    <footer>
-        &copy; {{ date('Y') }} &nbsp;&nbsp;
-        <a href='https://github.com/K-Tros/DWA15-P3' class='fa fa-github' target='_blank'> View on Github</a> &nbsp;&nbsp;
-        <a href='http://p3.krtsoftwaredev.me/' class='fa fa-link' target='_blank'> View Live</a>
-    </footer>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
@@ -51,4 +38,11 @@
     @yield('body')
 
 </body>
+
+<footer>
+    &copy; {{ date('Y') }} &nbsp;&nbsp;
+    <a href='https://github.com/K-Tros/DWA15-P3' class='fa fa-github' target='_blank'> View on Github</a> &nbsp;&nbsp;
+    <a href='http://p3.krtsoftwaredev.me/' class='fa fa-link' target='_blank'> View Live</a>
+</footer>
+
 </html>

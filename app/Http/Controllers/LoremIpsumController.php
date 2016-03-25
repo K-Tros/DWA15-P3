@@ -3,6 +3,7 @@
 namespace Project3\Http\Controllers;
 
 use Project3\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 
 class LoremIpsumController extends Controller
 {
@@ -11,7 +12,8 @@ class LoremIpsumController extends Controller
     * Returns the default view.
     */
     public function getIndex() {
-        return 'Default lorem-ipsum generator page.';
+        //return 'Default lorem-ipsum generator page.';
+        return view('lorem-ipsum.index');
     }
 
     /**

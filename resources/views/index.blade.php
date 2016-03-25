@@ -5,5 +5,5 @@
 @stop
 
 @section('content')
-    Welcome to Developer's Best Friend
+    <h1>Welcome to Developer's Best Friend</h1>
 @stop
