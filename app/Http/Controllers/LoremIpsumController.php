@@ -12,7 +12,6 @@ class LoremIpsumController extends Controller
     * Returns the default view.
     */
     public function getIndex() {
-        //return 'Default lorem-ipsum generator page.';
         return view('lorem-ipsum.lorem-ipsum');
     }
 
@@ -27,6 +26,5 @@ class LoremIpsumController extends Controller
         $paragraphs = $request->input('paragraphs', '0');
 
         return view('lorem-ipsum.lorem-ipsum')->with('paragraphs',$paragraphs);
-        //return 'This would respond to the post';
     }
 }
