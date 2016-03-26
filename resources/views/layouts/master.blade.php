@@ -18,13 +18,9 @@
 
 </head>
 <body>
-
-    <nav>
-        <ul>
-            <li><a href='/Project3/public/lorem-ipsum'>Lorem Ipsum Generator</a></li>
-            <li><a href='/Project3/public/user-generator'>User Generator</a></li>
-        </ul>
-    </nav>
+    <section>
+        @yield('nav')
+    </section>
 
     <section>
         {{-- Main page content will be yielded here --}}
@@ -39,7 +35,7 @@
 
 </body>
 
-<footer>
+<footer class='navbar navbar-fixed-bottom'>
     &copy; {{ date('Y') }} &nbsp;&nbsp;
     <a href='https://github.com/K-Tros/DWA15-P3' class='fa fa-github' target='_blank'> View on Github</a> &nbsp;&nbsp;
 </footer>

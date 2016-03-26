@@ -13,7 +13,7 @@ class LoremIpsumController extends Controller
     */
     public function getIndex() {
         //return 'Default lorem-ipsum generator page.';
-        return view('lorem-ipsum.index');
+        return view('lorem-ipsum.lorem-ipsum');
     }
 
     /**
@@ -24,6 +24,9 @@ class LoremIpsumController extends Controller
             'paragraphs' => 'required|numeric|between:1,99'
         ]);
 
-        return 'This would respond to the post';
+        $paragraphs = $request->input('paragraphs', '0');
+
+        return view('lorem-ipsum.lorem-ipsum')->with('paragraphs',$paragraphs);
+        //return 'This would respond to the post';
     }
 }
