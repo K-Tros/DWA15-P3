@@ -29,14 +29,23 @@ such as a page specific JavaScript files.
 
     <p>How many paragraphs would you like?</p>
 
-    <form method="POST" action="/Project3/public/lorem-ipsum">
+    <form method='POST' action='/Project3/public/lorem-ipsum'>
 
         {{ csrf_field() }}
 
-        <label for="numberOfParagraphs">Paragraphs: </label>
-        <input type="text" maxlength="2" id="numberOfParagraphs" name="numberOfParagraphs"> (Max: 99)
+        <label for='paragraphs'>Paragraphs: </label>
+        <input type='text' maxlength='2' id='paragraphs' name='paragraphs' value='{{ old('paragraphs')}}'> (Max: 99)
         <br>
-        <input type="submit" value="Submit">
+
+        @if(count($errors) > 0)
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+        @endif
+
+        <input type='submit' value='Submit'>
     </form>
 
 @stop

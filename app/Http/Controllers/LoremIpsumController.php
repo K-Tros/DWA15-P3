@@ -20,6 +20,10 @@ class LoremIpsumController extends Controller
      * Responds to requests to POST /lorem-ipsum
      */
     public function postGenerate(Request $request) {
+        $this->validate($request, [
+            'paragraphs' => 'required|numeric|between:1,99'
+        ]);
+
         return 'This would respond to the post';
     }
 }
