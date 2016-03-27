@@ -11,16 +11,16 @@
 @section('nav')
     <nav class='navbar navbar-default'>
         <ul class='nav navbar-nav'>
-            <li><a href='/Project3/public/'>Home</a></li>
-            <li><a href='/Project3/public/lorem-ipsum'>Lorem Ipsum Generator</a></li>
-            <li class='active'><a href='/Project3/public/user-generator'>User Generator</a></li>
+            <li><a href='/'>Home</a></li>
+            <li><a href='/lorem-ipsum'>Lorem Ipsum Generator</a></li>
+            <li class='active'><a href='/user-generator'>User Generator</a></li>
         </ul>
     </nav>
 @stop
 
 @section('body')
 
-    <form method='POST' action='/Project3/public/user-generator'>
+    <form method='POST' action='/user-generator'>
 
         {{ csrf_field() }}
 
