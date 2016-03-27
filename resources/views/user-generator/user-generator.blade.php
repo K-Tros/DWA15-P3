@@ -14,6 +14,7 @@
             <li><a href='/'>Home</a></li>
             <li><a href='/lorem-ipsum'>Lorem Ipsum Generator</a></li>
             <li class='active'><a href='/user-generator'>User Generator</a></li>
+            <li><a href='/password-generator'>Password Generator</a></li>
         </ul>
     </nav>
 @stop

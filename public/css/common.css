@@ -10,3 +10,29 @@ footer {
     height: 2em;
     background-color: #f5f5f5;
 }
+
+.block {
+    display: inline-block;
+    font-family: "Helvetica",Helvetica,sans-serif;
+    padding: .5em 1em;
+}
+
+body {
+    background-color: #d6e0f5;
+}
+
+.error {
+    color: red;
+    font-size: 1.5em;
+}
+
+.input {
+    background-color: #99b3e6;
+    font-size: 1.25em;
+    padding: 2em;
+}
+.password {
+    background-color: #234790;
+    color: white;
+    font-size: 2em;
+}

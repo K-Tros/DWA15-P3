@@ -7,7 +7,7 @@
 * ~~Add composer packages for generating lorem-ipsum and random users.~~
 * ~~Generally just add more detail to pages.~~
 * ~~Figure out why the footer doesn't look pretty.~~
-* Above and beyond stuff (add project 2 into this? probably use a hardcoded list to speed it up)
+* ~~Above and beyond stuff (add project 2 into this? probably use a hardcoded list to speed it up)~~ Limited the size of the word list for performance reasons.
 
 # Laravel PHP Framework
 

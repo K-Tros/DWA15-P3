@@ -26,4 +26,9 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/user-generator', 'UserGeneratorController@getIndex');
     // Posts for submitting the random user generator form
     Route::post('/user-generator', 'UserGeneratorController@postGenerate');
+
+    // Gets main page for password generator
+    Route::get('/password-generator', 'PasswordGeneratorController@getIndex');
+    // Posts for submitting the password generator form
+    Route::post('/password-generator', 'PasswordGeneratorController@postGenerate');
 });

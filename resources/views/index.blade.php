@@ -6,6 +6,7 @@
             <li class='active'><a href='/'>Home</a></li>
             <li><a href='/lorem-ipsum'>Lorem Ipsum Generator</a></li>
             <li><a href='/user-generator'>User Generator</a></li>
+            <li><a href='/password-generator'>Password Generator</a></li>
         </ul>
     </nav>
 @stop
@@ -23,4 +24,7 @@
     <h2>Random User Generator</h2>
     <p>Like lorem ipsum, only with people! Amazing!</p>
     <a href='/user-generator'>User Generator</a>
+    <h2>Random Password Generator</h2>
+    <p>Ever seen <a href='https://xkcd.com/936/'>this</a> xkcd comic? Well now there's a password generator that uses this method!</p>
+    <a href='/password-generator'>Password Generator</a>
 @stop
