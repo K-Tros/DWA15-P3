@@ -20,11 +20,9 @@
 
 </head>
 <body>
-    <section>
-        @yield('nav')
-    </section>
+    @yield('nav')
 
-    <section>
+    <section class="container center-block">
         {{-- Main page content will be yielded here --}}
         @yield('content')
     </section>

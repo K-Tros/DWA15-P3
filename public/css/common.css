@@ -36,3 +36,12 @@ body {
     color: white;
     font-size: 2em;
 }
+
+.user,
+.lorem-ipsum-output {
+    padding: .5em;
+}
+
+.navbar {
+    background-color: #e6f5ff;
+}

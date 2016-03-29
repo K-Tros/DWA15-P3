@@ -20,37 +20,38 @@
 @stop
 
 @section('body')
+    <div class="container center-block">
+        <p>How many paragraphs would you like?</p>
 
-    <p>How many paragraphs would you like?</p>
+        <form method='POST' action='/lorem-ipsum'>
 
-    <form method='POST' action='/lorem-ipsum'>
+            {{ csrf_field() }}
 
-        {{ csrf_field() }}
+            <label for='paragraphs'>Paragraphs: </label>
+            <input type='text' maxlength='2' id='paragraphs' name='paragraphs' value='{{ old('paragraphs')}}'> (Max: 99)
+            <br>
 
-        <label for='paragraphs'>Paragraphs: </label>
-        <input type='text' maxlength='2' id='paragraphs' name='paragraphs' value='{{ old('paragraphs')}}'> (Max: 99)
-        <br>
+            @if(count($errors) > 0)
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                        @endforeach
+                </ul>
+            @endif
 
-        @if(count($errors) > 0)
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                    @endforeach
-            </ul>
+            <input class='btn btn-primary' type='submit' value='Generate Lorem Ipsum'>
+        </form>
+
+        @if(isset($paragraphs))
+            <section class='lorem-ipsum-output container center-block"'>
+                <?php
+                    $generator = new Badcow\LoremIpsum\Generator();
+                    $generatedParagraphs = $generator->getParagraphs($paragraphs);
+                    // Extra p tag needed because implode doesn't add the first one
+                    echo '<p>' . implode('<p>', $generatedParagraphs);
+                ?>
+            </section>
         @endif
-
-        <input class='btn btn-primary' type='submit' value='Generate Lorem Ipsum'>
-    </form>
-
-    @if(isset($paragraphs))
-        <section class='lorem-ipsum-output'>
-            <?php
-                $generator = new Badcow\LoremIpsum\Generator();
-                $generatedParagraphs = $generator->getParagraphs($paragraphs);
-                // Extra p tag needed because implode doesn't add the first one
-                echo '<p>' . implode('<p>', $generatedParagraphs);
-            ?>
-        </section>
-    @endif
+    </div>
 
 @stop
