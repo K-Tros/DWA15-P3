@@ -7,7 +7,7 @@
 A multi-page application that provides three separate functions. 1) A lorem ipsum generator that takes a number and return that many paragraphs of lorem ipsum filler text. 2) A random user generator that takes a number and has two optional checkboxes for including random profile filler text and/or a random birthday. 3) An xkcd style password generate(see https://github.com/K-Tros/DWA15-P2, it is functionally similar to this application). The home page provides some brief descriptions of each of these.
 
 ## Demo
-To be added.
+<http://screencast.com/t/sT4yCiqg6>
 
 ## Details for teaching team
 No special notes for this project.
